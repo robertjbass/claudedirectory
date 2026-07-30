@@ -41,6 +41,7 @@ import { webappTestingSkill } from "./webapp-testing";
 // Community skills
 import { ansibleOpsSkill } from "./ansible-ops";
 import { appversionSkill } from "./appversion";
+import { predeploySkill } from "./predeploy";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -87,6 +88,7 @@ const curatedSkills: Skill[] = [
   // Community skills
   ansibleOpsSkill,
   appversionSkill,
+  predeploySkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
