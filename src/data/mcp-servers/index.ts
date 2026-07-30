@@ -97,6 +97,7 @@ import { rnwy } from "./rnwy";
 import { publicGrantsServer } from "./public-grants";
 import { trackmysharesServer } from "./trackmyshares";
 import { findMcpServer } from "./find-mcp";
+import { dottedsignServer } from "./dottedsign";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -213,6 +214,8 @@ const curatedMcpServers: MCPServer[] = [
   trackmysharesServer,
   // MCP Discovery
   findMcpServer,
+  // eSignature
+  dottedsignServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
