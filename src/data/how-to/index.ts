@@ -15,8 +15,10 @@ import { cicdIntegrationHowTo } from "./cicd-integration";
 import { multiPlatformSetupHowTo } from "./multi-platform-setup";
 import { backgroundAgentsWorktreesHowTo } from "./background-agents-worktrees";
 import { claudeFolderHowTo } from "./claude-folder";
+import { appversionReleaseHowTo } from "./appversion-release";
 
 export const howTos: HowTo[] = [
+  appversionReleaseHowTo,
   backgroundAgentsWorktreesHowTo,
   claudeFolderHowTo,
   gettingStartedHowTo,

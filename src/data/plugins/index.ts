@@ -1,5 +1,6 @@
 import { Plugin } from "@/lib/types";
 import { portaljsPlugin } from "./portaljs";
+import { skillsJanitorPlugin } from "./skills-janitor";
 import { agentSdkDevPlugin } from "./agent-sdk-dev";
 import { bugDetectivePlugin } from "./bug-detective";
 import { ccpmPlugin } from "./ccpm";
@@ -27,6 +28,7 @@ import { swiftLspPlugin } from "./swift-lsp";
 import { testWriterFixerPlugin } from "./test-writer-fixer";
 import { flowNextPlugin } from "./flow-next";
 import { ralphPlugin } from "./ralph";
+import { yapuiPlugin } from "./yapui";
 // LSP plugins
 import { typescriptLspPlugin } from "./typescript-lsp";
 import { pyrightLspPlugin } from "./pyright-lsp";
@@ -89,6 +91,9 @@ import { mcpRegistryPlugin } from "./mcp-registry";
 import { shadcnPlugin } from "./shadcn";
 import { bunPlugin } from "./bun";
 import { astroPlugin } from "./astro";
+// Market data plugins
+import { quantdataPlugin } from "./quantdata";
+import { appversionPlugin } from "./appversion";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -133,6 +138,7 @@ const curatedPlugins: Plugin[] = [
   deploymentEngineerPlugin,
   flowNextPlugin,
   ralphPlugin,
+  yapuiPlugin,
   // External plugins
   asanaPlugin,
   awsPlugin,
@@ -164,6 +170,7 @@ const curatedPlugins: Plugin[] = [
   storybookPlugin,
   // Community plugins
   portaljsPlugin,
+  skillsJanitorPlugin,
   perfProfilerPlugin,
   i18nManagerPlugin,
   depAuditPlugin,
@@ -186,6 +193,9 @@ const curatedPlugins: Plugin[] = [
   shadcnPlugin,
   bunPlugin,
   astroPlugin,
+  // Market data plugins
+  quantdataPlugin,
+  appversionPlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across

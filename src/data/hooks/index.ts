@@ -21,9 +21,11 @@ import { testCoverageGuardHook } from "./test-coverage-guard";
 import { autoPrDescriptionHook } from "./auto-pr-description";
 import { envLeakDetectorHook } from "./env-leak-detector";
 import { dependencyVulnCheckHook } from "./dependency-vuln-check";
+import { appversionDriftCheckHook } from "./appversion-drift-check";
 
 export const hooks: Hook[] = [
   dependencyVulnCheckHook,
+  appversionDriftCheckHook,
   lintOnEditHook,
   formatOnSaveHook,
   notifyOnCompleteHook,
