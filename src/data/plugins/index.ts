@@ -89,6 +89,8 @@ import { mcpRegistryPlugin } from "./mcp-registry";
 import { shadcnPlugin } from "./shadcn";
 import { bunPlugin } from "./bun";
 import { astroPlugin } from "./astro";
+// Market data plugins
+import { quantdataPlugin } from "./quantdata";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -186,6 +188,8 @@ const curatedPlugins: Plugin[] = [
   shadcnPlugin,
   bunPlugin,
   astroPlugin,
+  // Market data plugins
+  quantdataPlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across
