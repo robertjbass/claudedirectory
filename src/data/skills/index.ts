@@ -42,6 +42,9 @@ import { webappTestingSkill } from "./webapp-testing";
 import { ansibleOpsSkill } from "./ansible-ops";
 import { appversionSkill } from "./appversion";
 import { predeploySkill } from "./predeploy";
+import { regulatoryThreatModelSkill } from "./regulatory-threat-model";
+import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator";
+import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -89,6 +92,9 @@ const curatedSkills: Skill[] = [
   ansibleOpsSkill,
   appversionSkill,
   predeploySkill,
+  regulatoryThreatModelSkill,
+  incidentReportingNavigatorSkill,
+  craVulnerabilityObligationsSkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
