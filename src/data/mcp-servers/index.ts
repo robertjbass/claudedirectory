@@ -98,6 +98,7 @@ import { publicGrantsServer } from "./public-grants";
 import { trackmysharesServer } from "./trackmyshares";
 import { findMcpServer } from "./find-mcp";
 import { dottedsignServer } from "./dottedsign";
+import { safeinstallServer } from "./safeinstall";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -216,6 +217,7 @@ const curatedMcpServers: MCPServer[] = [
   findMcpServer,
   // eSignature
   dottedsignServer,
+  safeinstallServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
