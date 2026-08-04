@@ -113,7 +113,6 @@ const curatedMcpServers: MCPServer[] = [
   linearServer,
   awsServer,
   e2bServer,
-  productosMcp,
   postgresServer,
   sqliteServer,
   puppeteerServer,
@@ -220,6 +219,7 @@ const curatedMcpServers: MCPServer[] = [
   // eSignature
   dottedsignServer,
   safeinstallServer,
+  productosMcp,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
