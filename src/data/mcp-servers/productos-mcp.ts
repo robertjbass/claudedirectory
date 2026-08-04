@@ -3,17 +3,16 @@ import { MCPServer } from "@/lib/types";
 export const productosMcp: MCPServer = {
   slug: "productos-mcp",
   title: "ProductOS",
-  description: "Turn any AI client (Cursor, Claude Code, Windsurf) into a full ProductOS coding agent. Access 41+ tools for project management, cloud sandboxes, file operations, databases, deployments — all remote-first with no local clone needed.",
-  tags: ["workspace", "project-management", "coding-agent", "sandbox", "deployment", "database", "cloud"],
-  author: {
-    name: "Shreyash Singh",
-  },
-  featured: true,
-  logoUrl: "https://raw.githubusercontent.com/ShreyashSingh1/claudedirectory/add-productos-mcp/public/logos/productos-mcp.jpg",
+  description:
+    "Connect an MCP client to a ProductOS project: read live product context (PRD, research, designs) and drive the project's cloud sandbox — files, shell, sandbox lifecycle, Postgres and storage provisioning, GitHub sync, deployments, and a headless browser — across 55 scope-gated tools. Remote-first, so no local clone is required.",
+  tags: ["project-management", "coding-agent", "sandbox", "deployment", "database"],
+  author: { name: "Shreyash Singh" },
+  docsUrl: "https://productos.dev/docs/integrations/mcp-tools",
+  featured: false,
   config: `{
   "mcpServers": {
     "productos": {
-      "url": "https://beta.productos.dev/api/mcp/"
+      "url": "https://beta.productos.dev/api/mcp/connect"
     }
   }
 }`,
