@@ -157,13 +157,15 @@ export default async function MCPServerDetailPage(props: Props) {
           </div>
         )}
 
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Configuration</h2>
-            <CopyButton text={server.config} />
+        {server.config && (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold">Configuration</h2>
+              <CopyButton text={server.config} />
+            </div>
+            <CodeBlock code={server.config} language="json" />
           </div>
-          <CodeBlock code={server.config} language="json" />
-        </div>
+        )}
 
         <div className="bg-accent/50 rounded-lg p-4">
           <h3 className="font-semibold mb-2">How to use</h3>
@@ -189,6 +191,20 @@ export default async function MCPServerDetailPage(props: Props) {
             >
               <ExternalLink className="h-4 w-4" />
               View source on GitHub
+            </a>
+          </div>
+        )}
+
+        {server.docsUrl && (
+          <div>
+            <a
+              href={server.docsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View setup documentation
             </a>
           </div>
         )}

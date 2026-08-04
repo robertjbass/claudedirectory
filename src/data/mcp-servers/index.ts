@@ -96,6 +96,10 @@ import { googleColabServer } from "./google-colab";
 import { apifyServer } from "./apify";
 import { rnwy } from "./rnwy";
 import { publicGrantsServer } from "./public-grants";
+import { trackmysharesServer } from "./trackmyshares";
+import { findMcpServer } from "./find-mcp";
+import { dottedsignServer } from "./dottedsign";
+import { safeinstallServer } from "./safeinstall";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -210,6 +214,12 @@ const curatedMcpServers: MCPServer[] = [
   rnwy,
   // Finance & Grants
   publicGrantsServer,
+  trackmysharesServer,
+  // MCP Discovery
+  findMcpServer,
+  // eSignature
+  dottedsignServer,
+  safeinstallServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
