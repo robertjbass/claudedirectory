@@ -18,6 +18,7 @@ const KNOWN_MARKETPLACES = [
   "2389-research/claude-plugins",
   "Houseofmvps/ultraship",
   "claude-world/director-mode-lite",
+  "Eliasjunit/vibestretch",
 ];
 
 const MARKETPLACE_PATHS = [
