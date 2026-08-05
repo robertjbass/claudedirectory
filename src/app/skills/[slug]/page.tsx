@@ -155,9 +155,15 @@ export default async function SkillDetailPage(props: Props) {
           <h3 className="font-semibold mb-2">How to use</h3>
           <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
             <li>Copy the skill content above</li>
-            <li>Create a .claude/skills directory in your project</li>
-            <li>Save as .claude/skills/{skill.slug}.md</li>
-            <li>Use /{skill.slug} in Claude Code to invoke this skill</li>
+            <li>
+              Create a .claude/skills/{skill.slug} directory in your project (or
+              ~/.claude/skills/{skill.slug} to use it in every project)
+            </li>
+            <li>Save the content as .claude/skills/{skill.slug}/SKILL.md</li>
+            <li>
+              Claude Code loads it automatically when the task matches, or run /
+              {skill.slug} to invoke it directly
+            </li>
           </ol>
         </div>
 
