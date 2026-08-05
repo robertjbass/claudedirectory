@@ -45,6 +45,7 @@ import { predeploySkill } from "./predeploy";
 import { regulatoryThreatModelSkill } from "./regulatory-threat-model";
 import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator";
 import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
+import { feynmanItSkill } from "./feynman-it";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -95,6 +96,7 @@ const curatedSkills: Skill[] = [
   regulatoryThreatModelSkill,
   incidentReportingNavigatorSkill,
   craVulnerabilityObligationsSkill,
+  feynmanItSkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
