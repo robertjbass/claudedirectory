@@ -1,4 +1,5 @@
 import { MCPServer } from "@/lib/types";
+import { productosMcp } from "./productos-mcp";
 import { airtableServer } from "./airtable";
 import { apidogServer } from "./apidog";
 import { atlassianServer } from "./atlassian";
@@ -218,6 +219,7 @@ const curatedMcpServers: MCPServer[] = [
   // eSignature
   dottedsignServer,
   safeinstallServer,
+  productosMcp,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
