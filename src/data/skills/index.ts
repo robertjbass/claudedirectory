@@ -47,6 +47,7 @@ import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator"
 import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
 import { feynmanItSkill } from "./feynman-it";
 import { layerbaseSkill } from "./layerbase";
+import { pluribusEvidenceAttestationSkill } from "./pluribus-evidence-attestation";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -55,6 +56,7 @@ const curatedSkills: Skill[] = [
   reviewSkill,
   superpowersSkill,
   contextEngineeringSkill,
+  pluribusEvidenceAttestationSkill,
   webAssetGeneratorSkill,
   // New community skills
   playwrightSkill,
