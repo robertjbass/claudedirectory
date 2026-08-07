@@ -100,6 +100,7 @@ import { trackmysharesServer } from "./trackmyshares";
 import { findMcpServer } from "./find-mcp";
 import { dottedsignServer } from "./dottedsign";
 import { safeinstallServer } from "./safeinstall";
+import { vibekitServer } from "./vibekit";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -220,6 +221,8 @@ const curatedMcpServers: MCPServer[] = [
   dottedsignServer,
   safeinstallServer,
   productosMcp,
+  // Hosting & Deployment
+  vibekitServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
