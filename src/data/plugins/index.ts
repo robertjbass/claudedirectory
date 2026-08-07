@@ -94,6 +94,7 @@ import { astroPlugin } from "./astro";
 // Market data plugins
 import { quantdataPlugin } from "./quantdata";
 import { appversionPlugin } from "./appversion";
+import { brothersbePlugin } from "./brothersbe";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -196,6 +197,7 @@ const curatedPlugins: Plugin[] = [
   // Market data plugins
   quantdataPlugin,
   appversionPlugin,
+  brothersbePlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across
