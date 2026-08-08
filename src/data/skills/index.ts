@@ -47,6 +47,7 @@ import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator"
 import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
 import { feynmanItSkill } from "./feynman-it";
 import { layerbaseSkill } from "./layerbase";
+import { projectRegistrySkill } from "./project-registry";
 import { pluribusEvidenceAttestationSkill } from "./pluribus-evidence-attestation";
 
 const curatedSkills: Skill[] = [
@@ -93,6 +94,7 @@ const curatedSkills: Skill[] = [
   consolidateMemorySkill,
   webappTestingSkill,
   // Community skills
+  projectRegistrySkill,
   ansibleOpsSkill,
   appversionSkill,
   predeploySkill,
