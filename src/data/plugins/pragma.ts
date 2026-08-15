@@ -32,6 +32,6 @@ export const pragmaPlugin: Plugin = {
     { name: "/test", description: "Write comprehensive tests for a feature branch" },
     { name: "/bugfix", description: "Regression test first, then fix — test-first always" },
     { name: "/release", description: "Version bump, changelog, PR to main, git tag" },
-    { name: "/pragma-init", description: "Interactive setup — configures CLAUDE.md and invariants.md for your project instead of leaving them as templates" },
+    { name: "/pragma:init", description: "Interactive setup — configures CLAUDE.md and invariants.md for your project instead of leaving them as templates" },
   ],
 };
