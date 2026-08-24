@@ -1,6 +1,7 @@
 import { MCPServer } from "@/lib/types";
 import { productosMcp } from "./productos-mcp";
 import { airtableServer } from "./airtable";
+import { churnsolutionServer } from "./churnsolution";
 import { apidogServer } from "./apidog";
 import { atlassianServer } from "./atlassian";
 import { awsServer } from "./aws";
@@ -155,6 +156,7 @@ const curatedMcpServers: MCPServer[] = [
   // Business Tools
   atlassianServer,
   airtableServer,
+  churnsolutionServer,
   shopifyServer,
   raygunServer,
   // Database & Infrastructure
