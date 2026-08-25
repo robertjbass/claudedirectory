@@ -19,6 +19,7 @@ const KNOWN_MARKETPLACES = [
   "Houseofmvps/ultraship",
   "claude-world/director-mode-lite",
   "Eliasjunit/vibestretch",
+  "Sting25/claude-code-handoff",
 ];
 
 const MARKETPLACE_PATHS = [
