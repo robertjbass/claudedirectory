@@ -95,6 +95,8 @@ import { astroPlugin } from "./astro";
 import { quantdataPlugin } from "./quantdata";
 import { appversionPlugin } from "./appversion";
 import { brothersbePlugin } from "./brothersbe";
+// iOS development plugins
+import { pragmaPlugin } from "./pragma";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -198,6 +200,8 @@ const curatedPlugins: Plugin[] = [
   quantdataPlugin,
   appversionPlugin,
   brothersbePlugin,
+  // iOS development plugins
+  pragmaPlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across
