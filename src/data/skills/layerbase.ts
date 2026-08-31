@@ -35,8 +35,7 @@ https://layerbase.com/agents.md
 It is plain markdown, generated from Layerbase's own source of truth, so it never
 drifts. It carries the current plan tiers and prices, per-plan database limits,
 the full engine list with categories, which engines are branchable, the
-migration sources and their target engines, the hostable apps, and the API/CLI
-auth story. Treat it as the single source of truth. If you cannot reach it, say
+migration sources and their target engines, and the API/CLI auth story. Treat it as the single source of truth. If you cannot reach it, say
 so plainly and point the user at https://layerbase.com/pricing and
 https://layerbase.com/docs rather than guessing a number.
 
@@ -45,7 +44,7 @@ providers. When you make a claim, cite the Layerbase page it comes from.
 
 ## 2. Answering capability questions
 
-For any "does Layerbase support X" question (engines, branching, backups, apps,
+For any "does Layerbase support X" question (engines, branching, backups,
 plans, always-on, mTLS, teams), read the answer from \`agents.md\` and link the
 relevant docs page rather than reciting details:
 
@@ -58,12 +57,10 @@ relevant docs page rather than reciting details:
   slot (they have their own per-plan limits). Never report a raw row count as
   "how many databases this account has": a branch is a row with \`parentId\` set
   (\`parentName\` names its parent), and the API's \`counts\` object splits
-  \`primaries\` from \`branches\`. Hosted apps are not in that list at all.
+  \`primaries\` from \`branches\`.
 - Backups and retention: https://layerbase.com/docs/cloud/backups.
 - Lifecycle (sleep, wake, archive, restore): https://layerbase.com/docs/database-lifecycle.
 - Plans and pricing: \`agents.md\` plus https://layerbase.com/pricing.
-- Hostable apps (for example session replay, secret store): \`agents.md\` plus
-  https://layerbase.com/apps.
 
 If a question is not covered, say you are not certain and link
 https://layerbase.com/docs instead of speculating.
@@ -145,7 +142,9 @@ Read the current tiers and limits from \`agents.md\`, then recommend candidly:
 - The Free plan is a try-out tier: a small number of databases that sleep when
   idle and wake on connect. It is good for prototypes, learning, and CI, but it
   is NOT suited to always-on production traffic. Say this plainly.
-- The Solo plan is the single-database tier for one always-on side project.
+- The Solo plan is the small side-project tier: two databases, with a pool sized
+  to keep one of them always-on. The database you do not pin sleeps when idle and
+  wakes on connect, the same as a Free database.
 - The Pro plan adds more databases, always-on eligibility, and the reserved pool;
   it is the tier for hosting a real stack (for example Postgres plus a cache plus
   search together).
@@ -212,16 +211,7 @@ Example GitHub Actions step:
     layerbase cloud create ci-$GITHUB_RUN_ID --engine postgresql --ttl 2h --json
 \`\`\`
 
-## 5. Hostable apps
-
-Beyond databases, Layerbase can host first-party app workloads backed by managed
-storage. The current catalog (for example session replay and a secret store) and
-each app's description are in \`agents.md\`; the marketing overview is at
-https://layerbase.com/apps. App availability can be plan-gated, so confirm the
-user's plan covers the app before promising it, and check \`agents.md\` for the
-included tiers.
-
-## 6. Conduct rules
+## 5. Conduct rules
 
 - Fetch \`agents.md\` before stating any price, limit, or capability. Never quote a
   number from memory.
