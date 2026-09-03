@@ -184,8 +184,14 @@ up like this:
    \`POST /v1/databases\` with a \`ttlHours\` field). TTL is capped at 72 hours. A
    transient database still counts against your plan's database limit while it
    is alive, and self-destructs at expiry.
-5. Seed via the printed connection string, run tests, then delete explicitly
-   (\`layerbase cloud delete <name>\`), letting the TTL be the safety net.
+5. Seed via the connection string, run tests, then delete explicitly
+   (\`layerbase cloud delete <name>\`), letting the TTL be the safety net. Since
+   CLI 2.0.0 every connection string the CLI prints, \`--json\` included, has its
+   password masked as \`****\`, so to get a connectable one either add
+   \`--show-secrets\` (alias \`--reveal\`) to the create call or ask for it on its
+   own with \`layerbase cloud connection-string <name>\`, which always prints in
+   full. Prefer the second: it keeps the credential out of the create output
+   you may be logging.
 
 Prefer branch-per-PR where the engine supports branching: branch from a seeded
 parent for an instant seeded copy, reset between runs, and delete on teardown.
@@ -209,6 +215,8 @@ Example GitHub Actions step:
   run: |
     npm i -g layerbase
     layerbase cloud create ci-$GITHUB_RUN_ID --engine postgresql --ttl 2h --json
+    # The JSON above has the password masked. Fetch a connectable URL separately:
+    echo "DATABASE_URL=$(layerbase cloud connection-string ci-$GITHUB_RUN_ID)" >> "$GITHUB_ENV"
 \`\`\`
 
 ## 5. Conduct rules
